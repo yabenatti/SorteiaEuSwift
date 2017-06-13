@@ -68,32 +68,31 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.98039215690000003" green="0.48627450979999998" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qu7-Hg-mz6">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qu7-Hg-mz6" id="OLg-3X-Q2S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="0.39607843139999999" green="0.87058823529999996" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-8O-5FQ" userLabel="empty" customClass="EmptyStateView" customModule="SorteiaEuSwift" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="510"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LiW-8O-5FQ" secondAttribute="trailing" id="586-JS-JMo"/>
+                            <constraint firstItem="LiW-8O-5FQ" firstAttribute="top" secondItem="2iw-uH-GtJ" secondAttribute="bottom" id="69K-AY-zKP"/>
                             <constraint firstAttribute="bottom" secondItem="brK-B4-sxx" secondAttribute="bottom" id="8MC-dc-HUV"/>
                             <constraint firstItem="brK-B4-sxx" firstAttribute="top" secondItem="2iw-uH-GtJ" secondAttribute="bottom" id="8uC-R3-CAn"/>
                             <constraint firstItem="2iw-uH-GtJ" firstAttribute="top" secondItem="lRH-Pd-9CA" secondAttribute="bottom" id="Bcq-vX-B9W"/>
+                            <constraint firstItem="MaA-qb-GfU" firstAttribute="top" secondItem="LiW-8O-5FQ" secondAttribute="bottom" id="JDS-ht-WSm"/>
                             <constraint firstItem="brK-B4-sxx" firstAttribute="leading" secondItem="R3c-ig-UsP" secondAttribute="leading" id="RjO-1X-5od"/>
                             <constraint firstAttribute="trailing" secondItem="brK-B4-sxx" secondAttribute="trailing" id="bSZ-cZ-k7d"/>
                             <constraint firstItem="2iw-uH-GtJ" firstAttribute="leading" secondItem="R3c-ig-UsP" secondAttribute="leading" id="bmf-e0-66p"/>
+                            <constraint firstItem="LiW-8O-5FQ" firstAttribute="leading" secondItem="R3c-ig-UsP" secondAttribute="leading" id="q1h-cK-zjJ"/>
                             <constraint firstAttribute="trailing" secondItem="2iw-uH-GtJ" secondAttribute="trailing" id="ri6-3y-jKM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k3i-2o-uNd"/>
                     <connections>
+                        <outlet property="emptyStateView" destination="LiW-8O-5FQ" id="K1E-0L-bYV"/>
+                        <outlet property="segmentedControl" destination="mzz-zW-Upp" id="JKj-5Q-UHg"/>
                         <outlet property="tableView" destination="brK-B4-sxx" id="oSg-9B-ieg"/>
                     </connections>
                 </viewController>

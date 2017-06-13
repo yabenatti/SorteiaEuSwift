@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var emptyStateView: EmptyStateView!
     
     var raffleArray = [String]()
     
@@ -36,6 +38,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.emptyStateView.isHidden = true
+        self.emptyStateView.messageLabel.text = "Coming Soon!"
+        
         self.tableView.reloadData()
     }
 
@@ -94,5 +99,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func didChangeSegmentedControl(_ sender: Any) {
+        switch self.segmentedControl.selectedSegmentIndex {
+        case 1:
+            self.emptyStateView.isHidden = false
+        default:
+            self.emptyStateView.isHidden = true
+        }
     }
 }
