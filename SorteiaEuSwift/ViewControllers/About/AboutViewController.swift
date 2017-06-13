@@ -13,7 +13,11 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //Title
+        self.title = "Sorteia.eu"
+        
+        //Logout
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogoutButton(_:)))
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +36,25 @@ class AboutViewController: UIViewController {
     }
     */
 
+    @IBAction func didTapGitHubButton(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://github.com/yabenatti/SorteiaEuSwift")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func didTapMobileView(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "http://yasminbenatti.org/")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func didTapApiView(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://github.com/flavioheleno")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func didTapSorteiaEuLabel(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "http://sorteia.eu/")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func didTapLogoutButton(_ sender: Any) {
+        AppUtils.clearUserDefault()
+        self.navigationController?.dismiss(animated: false, completion: nil)
+    }
+    
 }

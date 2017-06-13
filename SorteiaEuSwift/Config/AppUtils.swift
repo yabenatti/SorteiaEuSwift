@@ -19,4 +19,8 @@ class AppUtils: NSObject {
     class func retrieveFromUserDefaultWithKey(key: String) -> Any? {
         return UserDefaults.standard.object(forKey:key);
     }
+    
+    class func clearUserDefault() {
+        AppUtils.saveToUserDefault(objectToSave: nil, key: Constants.kApiToken)
+    }
 }
