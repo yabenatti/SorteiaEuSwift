@@ -1,5 +1,5 @@
 //
-//  RaffleTypeViewController.swift
+//  CreationRetweetViewController.swift
 //  SorteiaEuSwift
 //
 //  Created by Yasmin Benatti on 13/06/17.
@@ -8,12 +8,16 @@
 
 import UIKit
 
-class RaffleTypeViewController: UIViewController {
+class CreationRetweetViewController: UIViewController {
 
+    @IBOutlet weak var emptyStateView: EmptyStateView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Raffle Type"
+        self.title = "Retweet Raffle"
+        
+        self.emptyStateView.messageLabel.text = "Coming Soon! :)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +36,4 @@ class RaffleTypeViewController: UIViewController {
     }
     */
 
-    @IBAction func didTapFollowersButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createFollowersSegue", sender: nil)
-    }
-    
-    @IBAction func didTapRetweetButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createRetweetSegue", sender: nil)
-    }
 }

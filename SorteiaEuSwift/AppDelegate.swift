@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
+        tabBar.isTranslucent = true
         
         
         //Status Bar

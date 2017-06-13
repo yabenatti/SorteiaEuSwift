@@ -1,5 +1,5 @@
 //
-//  RaffleTypeViewController.swift
+//  CreationFollowersViewController.swift
 //  SorteiaEuSwift
 //
 //  Created by Yasmin Benatti on 13/06/17.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class RaffleTypeViewController: UIViewController {
+class CreationFollowersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Raffle Type"
+        self.title = "Followers Raffle"
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +32,7 @@ class RaffleTypeViewController: UIViewController {
     }
     */
 
-    @IBAction func didTapFollowersButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createFollowersSegue", sender: nil)
-    }
-    
-    @IBAction func didTapRetweetButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "createRetweetSegue", sender: nil)
+    @IBAction func didTapOutsideTheView(_ sender: Any) {
+        self.view.endEditing(true)
     }
 }

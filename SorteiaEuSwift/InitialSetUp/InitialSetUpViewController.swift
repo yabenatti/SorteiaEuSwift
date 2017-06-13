@@ -25,7 +25,7 @@ class InitialSetUpViewController: UIViewController {
             self.navigationController?.present(vc, animated: true, completion: nil)
         } else {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
-            self.navigationController?.present(vc!, animated: true, completion: nil)
+            self.navigationController?.present(vc!, animated: false, completion: nil)
         }
     }
 
