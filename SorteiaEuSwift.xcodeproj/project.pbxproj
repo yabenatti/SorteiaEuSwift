@@ -19,6 +19,9 @@
 		E472A8B51EF02C3400FD75AF /* RaffleTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B41EF02C3400FD75AF /* RaffleTypeViewController.swift */; };
 		E472A8B71EF02C4700FD75AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B61EF02C4700FD75AF /* LoginViewController.swift */; };
 		E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B81EF02D2600FD75AF /* TabBarViewController.swift */; };
+		E472A8BC1EF02F6A00FD75AF /* InitialSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8BB1EF02F6A00FD75AF /* InitialSetUpViewController.swift */; };
+		E472A8BE1EF02F7500FD75AF /* InitialSetUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8BD1EF02F7500FD75AF /* InitialSetUp.storyboard */; };
+		E472A8C11EF030A100FD75AF /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C01EF030A100FD75AF /* AppUtils.swift */; };
 		E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */; };
 		E4BBB1E21EF02176008A9CB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1E11EF02176008A9CB2 /* ViewController.swift */; };
 		E4BBB1E51EF02176008A9CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E31EF02176008A9CB2 /* Main.storyboard */; };
@@ -64,6 +67,9 @@
 		E472A8B41EF02C3400FD75AF /* RaffleTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleTypeViewController.swift; sourceTree = "<group>"; };
 		E472A8B61EF02C4700FD75AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E472A8B81EF02D2600FD75AF /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E472A8BB1EF02F6A00FD75AF /* InitialSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSetUpViewController.swift; sourceTree = "<group>"; };
+		E472A8BD1EF02F7500FD75AF /* InitialSetUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialSetUp.storyboard; sourceTree = "<group>"; };
+		E472A8C01EF030A100FD75AF /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		E4BBB1DC1EF02176008A9CB2 /* SorteiaEuSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorteiaEuSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4BBB1E11EF02176008A9CB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +148,23 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		E472A8BA1EF02F4200FD75AF /* InitialSetUp */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8BB1EF02F6A00FD75AF /* InitialSetUpViewController.swift */,
+				E472A8BD1EF02F7500FD75AF /* InitialSetUp.storyboard */,
+			);
+			path = InitialSetUp;
+			sourceTree = "<group>";
+		};
+		E472A8BF1EF0307A00FD75AF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8C01EF030A100FD75AF /* AppUtils.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		E4BBB1D31EF02176008A9CB2 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +190,8 @@
 		E4BBB1DE1EF02176008A9CB2 /* SorteiaEuSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E472A8BF1EF0307A00FD75AF /* Config */,
+				E472A8BA1EF02F4200FD75AF /* InitialSetUp */,
 				E472A8AF1EF02B9B00FD75AF /* ViewControllers */,
 				E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */,
 				E4BBB1E11EF02176008A9CB2 /* ViewController.swift */,
@@ -320,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BBB1EA1EF02176008A9CB2 /* LaunchScreen.storyboard in Resources */,
+				E472A8BE1EF02F7500FD75AF /* InitialSetUp.storyboard in Resources */,
 				E4BBB1E71EF02176008A9CB2 /* Assets.xcassets in Resources */,
 				E472A8AE1EF02AA700FD75AF /* Login.storyboard in Resources */,
 				E472A8AC1EF02A9B00FD75AF /* About.storyboard in Resources */,
@@ -488,8 +514,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E472A8C11EF030A100FD75AF /* AppUtils.swift in Sources */,
 				E472A8B71EF02C4700FD75AF /* LoginViewController.swift in Sources */,
 				E4BBB1E21EF02176008A9CB2 /* ViewController.swift in Sources */,
+				E472A8BC1EF02F6A00FD75AF /* InitialSetUpViewController.swift in Sources */,
 				E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */,
 				E472A8B31EF02C1700FD75AF /* AboutViewController.swift in Sources */,
 				E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */,

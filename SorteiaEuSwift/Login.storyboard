@@ -28,7 +28,7 @@
         <!--Login View Controller-->
         <scene sceneID="9om-Gi-bEw">
             <objects>
-                <viewController id="Cai-xY-Kr7" customClass="LoginViewController" customModule="SorteiaEuSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Cai-xY-Kr7" customClass="LoginViewController" customModule="SorteiaEuSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UDa-LH-tTV"/>
                         <viewControllerLayoutGuide type="bottom" id="c6D-xx-iDX"/>
@@ -36,7 +36,7 @@
                     <view key="view" contentMode="scaleToFill" id="fKr-eH-pal">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="eYh-Kd-cnX"/>
                 </viewController>
