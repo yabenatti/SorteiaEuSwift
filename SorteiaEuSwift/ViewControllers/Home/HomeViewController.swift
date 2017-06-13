@@ -16,16 +16,27 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //TableView
-        self.tableView.delegate = self;
-        self.tableView.dataSource = self;
         
         //Title
         self.title = "Home"
         
         //Right Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.didTapRightBarButton(_:)))
+        
+        //Testing Raffle Array
+        self.raffleArray.append("Raffle1")
+        self.raffleArray.append("Raffle2")
+        self.raffleArray.append("Raffle3")
+        
+        //TableView
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(RaffleTableViewCell.classForCoder(), forCellReuseIdentifier: raffleTableViewCellIdentifier)
+        self.tableView.register(UINib(nibName: "RaffleTableViewCell", bundle: nil), forCellReuseIdentifier: raffleTableViewCellIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,15 +58,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK : - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.raffleArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: raffleTableViewCellIdentifier, for: indexPath) as! RaffleTableViewCell
         
-        cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.raffleNameLabel.text = self.raffleArray[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 24
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = TableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 24))
+        headerView.titleLabel.text = "Raffles"
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // MARK : - IBActions

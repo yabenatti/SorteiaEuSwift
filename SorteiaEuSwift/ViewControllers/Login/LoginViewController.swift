@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
         
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.navigationBar.barStyle = .black
-
     }
 
     override func didReceiveMemoryWarning() {

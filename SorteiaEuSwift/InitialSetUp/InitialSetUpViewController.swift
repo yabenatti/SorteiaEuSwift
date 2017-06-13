@@ -15,7 +15,6 @@ class InitialSetUpViewController: UIViewController {
 
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {

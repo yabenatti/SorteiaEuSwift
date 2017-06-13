@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="RaffleTableViewCell" customModule="SorteiaEuSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Raffle Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ot-Rh-7UT">
+                        <rect key="frame" x="16" y="8" width="88" height="21"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                        <color key="textColor" red="0.21176470589999999" green="0.27450980390000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created 2min ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COq-v2-Bwh">
+                        <rect key="frame" x="122" y="11" width="77" height="14"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="11"/>
+                        <color key="textColor" red="0.21176470589999999" green="0.27450980390000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="url/xpto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHG-O6-ZUG">
+                        <rect key="frame" x="16" y="34" width="42.5" height="16"/>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="13"/>
+                        <color key="textColor" red="0.21176470589999999" green="0.27450980390000002" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-Iy-mKN">
+                        <rect key="frame" x="112" y="17.5" width="2" height="2"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.94901960780000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="hEE-Iy-mKN" secondAttribute="height" multiplier="1:1" id="CZl-74-m8b"/>
+                            <constraint firstAttribute="height" constant="2" id="cZY-2g-IkY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQj-Do-KDz">
+                        <rect key="frame" x="0.0" y="58.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.27450980390000002" blue="0.32156862749999998" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="z7X-ZB-ws4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zHG-O6-ZUG" firstAttribute="top" secondItem="6Ot-Rh-7UT" secondAttribute="bottom" constant="5" id="2Ss-TR-oRs"/>
+                    <constraint firstItem="hEE-Iy-mKN" firstAttribute="centerY" secondItem="6Ot-Rh-7UT" secondAttribute="centerY" id="4rG-47-RB6"/>
+                    <constraint firstItem="COq-v2-Bwh" firstAttribute="centerY" secondItem="6Ot-Rh-7UT" secondAttribute="centerY" id="7fz-ki-oZu"/>
+                    <constraint firstItem="hEE-Iy-mKN" firstAttribute="leading" secondItem="6Ot-Rh-7UT" secondAttribute="trailing" constant="8" id="DVQ-we-REX"/>
+                    <constraint firstItem="eQj-Do-KDz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gly-7j-DWR"/>
+                    <constraint firstItem="6Ot-Rh-7UT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HO2-i5-17d"/>
+                    <constraint firstItem="6Ot-Rh-7UT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UAF-UD-4Yd"/>
+                    <constraint firstItem="COq-v2-Bwh" firstAttribute="leading" secondItem="hEE-Iy-mKN" secondAttribute="trailing" constant="8" id="eNB-bt-g1K"/>
+                    <constraint firstItem="zHG-O6-ZUG" firstAttribute="leading" secondItem="6Ot-Rh-7UT" secondAttribute="leading" id="h0s-hv-OdC"/>
+                    <constraint firstAttribute="bottom" secondItem="eQj-Do-KDz" secondAttribute="bottom" id="vwE-UJ-bue"/>
+                    <constraint firstAttribute="trailing" secondItem="eQj-Do-KDz" secondAttribute="trailing" id="wKY-88-82u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="raffleCreationDateLabel" destination="COq-v2-Bwh" id="wd8-x1-8sC"/>
+                <outlet property="raffleNameLabel" destination="6Ot-Rh-7UT" id="F8g-2m-tyh"/>
+                <outlet property="raffleUrlLabel" destination="zHG-O6-ZUG" id="eMH-Lu-5bJ"/>
+            </connections>
+            <point key="canvasLocation" x="-99" y="16"/>
+        </tableViewCell>
+    </objects>
+</document>
