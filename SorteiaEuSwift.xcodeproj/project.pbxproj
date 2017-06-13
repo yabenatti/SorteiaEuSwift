@@ -14,16 +14,15 @@
 		E472A8AA1EF02A9100FD75AF /* Creation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8A91EF02A9100FD75AF /* Creation.storyboard */; };
 		E472A8AC1EF02A9B00FD75AF /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8AB1EF02A9B00FD75AF /* About.storyboard */; };
 		E472A8AE1EF02AA700FD75AF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8AD1EF02AA700FD75AF /* Login.storyboard */; };
-		E472A8B11EF02C0200FD75AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B01EF02C0200FD75AF /* HomeViewController.swift */; };
-		E472A8B31EF02C1700FD75AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B21EF02C1700FD75AF /* AboutViewController.swift */; };
-		E472A8B51EF02C3400FD75AF /* RaffleTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B41EF02C3400FD75AF /* RaffleTypeViewController.swift */; };
-		E472A8B71EF02C4700FD75AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B61EF02C4700FD75AF /* LoginViewController.swift */; };
 		E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8B81EF02D2600FD75AF /* TabBarViewController.swift */; };
 		E472A8BC1EF02F6A00FD75AF /* InitialSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8BB1EF02F6A00FD75AF /* InitialSetUpViewController.swift */; };
 		E472A8BE1EF02F7500FD75AF /* InitialSetUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8BD1EF02F7500FD75AF /* InitialSetUp.storyboard */; };
 		E472A8C11EF030A100FD75AF /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C01EF030A100FD75AF /* AppUtils.swift */; };
+		E472A8CA1EF04AA300FD75AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C31EF04AA300FD75AF /* AboutViewController.swift */; };
+		E472A8CB1EF04AA300FD75AF /* RaffleTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C51EF04AA300FD75AF /* RaffleTypeViewController.swift */; };
+		E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C71EF04AA300FD75AF /* HomeViewController.swift */; };
+		E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C91EF04AA300FD75AF /* LoginViewController.swift */; };
 		E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */; };
-		E4BBB1E21EF02176008A9CB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1E11EF02176008A9CB2 /* ViewController.swift */; };
 		E4BBB1E51EF02176008A9CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E31EF02176008A9CB2 /* Main.storyboard */; };
 		E4BBB1E71EF02176008A9CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E61EF02176008A9CB2 /* Assets.xcassets */; };
 		E4BBB1EA1EF02176008A9CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E81EF02176008A9CB2 /* LaunchScreen.storyboard */; };
@@ -62,17 +61,16 @@
 		E472A8A91EF02A9100FD75AF /* Creation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Creation.storyboard; sourceTree = "<group>"; };
 		E472A8AB1EF02A9B00FD75AF /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E472A8AD1EF02AA700FD75AF /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		E472A8B01EF02C0200FD75AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E472A8B21EF02C1700FD75AF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		E472A8B41EF02C3400FD75AF /* RaffleTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleTypeViewController.swift; sourceTree = "<group>"; };
-		E472A8B61EF02C4700FD75AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E472A8B81EF02D2600FD75AF /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		E472A8BB1EF02F6A00FD75AF /* InitialSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialSetUpViewController.swift; sourceTree = "<group>"; };
 		E472A8BD1EF02F7500FD75AF /* InitialSetUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InitialSetUp.storyboard; sourceTree = "<group>"; };
 		E472A8C01EF030A100FD75AF /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		E472A8C31EF04AA300FD75AF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E472A8C51EF04AA300FD75AF /* RaffleTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleTypeViewController.swift; sourceTree = "<group>"; };
+		E472A8C71EF04AA300FD75AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E472A8C91EF04AA300FD75AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4BBB1DC1EF02176008A9CB2 /* SorteiaEuSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorteiaEuSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4BBB1E11EF02176008A9CB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4BBB1E41EF02176008A9CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4BBB1E61EF02176008A9CB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4BBB1E91EF02176008A9CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,10 +137,10 @@
 		E472A8AF1EF02B9B00FD75AF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E472A8B01EF02C0200FD75AF /* HomeViewController.swift */,
-				E472A8B21EF02C1700FD75AF /* AboutViewController.swift */,
-				E472A8B41EF02C3400FD75AF /* RaffleTypeViewController.swift */,
-				E472A8B61EF02C4700FD75AF /* LoginViewController.swift */,
+				E472A8C21EF04AA300FD75AF /* About */,
+				E472A8C41EF04AA300FD75AF /* Creation */,
+				E472A8C61EF04AA300FD75AF /* Home */,
+				E472A8C81EF04AA300FD75AF /* Login */,
 				E472A8B81EF02D2600FD75AF /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -163,6 +161,38 @@
 				E472A8C01EF030A100FD75AF /* AppUtils.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		E472A8C21EF04AA300FD75AF /* About */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8C31EF04AA300FD75AF /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		E472A8C41EF04AA300FD75AF /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8C51EF04AA300FD75AF /* RaffleTypeViewController.swift */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		E472A8C61EF04AA300FD75AF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8C71EF04AA300FD75AF /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E472A8C81EF04AA300FD75AF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E472A8C91EF04AA300FD75AF /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		E4BBB1D31EF02176008A9CB2 = {
@@ -194,7 +224,6 @@
 				E472A8BA1EF02F4200FD75AF /* InitialSetUp */,
 				E472A8AF1EF02B9B00FD75AF /* ViewControllers */,
 				E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */,
-				E4BBB1E11EF02176008A9CB2 /* ViewController.swift */,
 				E4BBB1E31EF02176008A9CB2 /* Main.storyboard */,
 				E4BBB1E61EF02176008A9CB2 /* Assets.xcassets */,
 				E4BBB1E81EF02176008A9CB2 /* LaunchScreen.storyboard */,
@@ -515,14 +544,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E472A8C11EF030A100FD75AF /* AppUtils.swift in Sources */,
-				E472A8B71EF02C4700FD75AF /* LoginViewController.swift in Sources */,
-				E4BBB1E21EF02176008A9CB2 /* ViewController.swift in Sources */,
 				E472A8BC1EF02F6A00FD75AF /* InitialSetUpViewController.swift in Sources */,
 				E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */,
-				E472A8B31EF02C1700FD75AF /* AboutViewController.swift in Sources */,
+				E472A8CA1EF04AA300FD75AF /* AboutViewController.swift in Sources */,
+				E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */,
+				E472A8CB1EF04AA300FD75AF /* RaffleTypeViewController.swift in Sources */,
+				E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */,
 				E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */,
-				E472A8B11EF02C0200FD75AF /* HomeViewController.swift in Sources */,
-				E472A8B51EF02C3400FD75AF /* RaffleTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
