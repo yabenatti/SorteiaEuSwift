@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zb9-He-NGS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Creation-->
+        <scene sceneID="BhM-PT-H3L">
+            <objects>
+                <navigationController id="zb9-He-NGS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Creation" id="gLc-Yz-dGw"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnu-EL-FPv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lbc-gL-Tup" kind="relationship" relationship="rootViewController" id="bqE-zt-yNF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4tm-UP-Knr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-287" y="80"/>
+        </scene>
+        <!--Raffle Type View Controller-->
+        <scene sceneID="prV-qE-gAx">
+            <objects>
+                <viewController id="lbc-gL-Tup" customClass="RaffleTypeViewController" customModule="SorteiaEuSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jhm-ag-AGh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZOg-Ku-eAb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4w0-44-Xon">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a0X-tX-BSP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="354-Ml-iKq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="81"/>
+        </scene>
+    </scenes>
+</document>
