@@ -22,6 +22,7 @@
 		E472A8CB1EF04AA300FD75AF /* RaffleTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C51EF04AA300FD75AF /* RaffleTypeViewController.swift */; };
 		E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C71EF04AA300FD75AF /* HomeViewController.swift */; };
 		E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C91EF04AA300FD75AF /* LoginViewController.swift */; };
+		E472A8CF1EF04AFC00FD75AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8CE1EF04AFC00FD75AF /* Constants.swift */; };
 		E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */; };
 		E4BBB1E51EF02176008A9CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E31EF02176008A9CB2 /* Main.storyboard */; };
 		E4BBB1E71EF02176008A9CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E61EF02176008A9CB2 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		E472A8C51EF04AA300FD75AF /* RaffleTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleTypeViewController.swift; sourceTree = "<group>"; };
 		E472A8C71EF04AA300FD75AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E472A8C91EF04AA300FD75AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E472A8CE1EF04AFC00FD75AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4BBB1DC1EF02176008A9CB2 /* SorteiaEuSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorteiaEuSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4BBB1E41EF02176008A9CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E472A8C01EF030A100FD75AF /* AppUtils.swift */,
+				E472A8CE1EF04AFC00FD75AF /* Constants.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 				E472A8CB1EF04AA300FD75AF /* RaffleTypeViewController.swift in Sources */,
 				E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */,
 				E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */,
+				E472A8CF1EF04AFC00FD75AF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

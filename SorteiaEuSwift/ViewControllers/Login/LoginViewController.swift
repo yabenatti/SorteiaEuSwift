@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func didTapLoginButton(_ sender: Any) {
-        AppUtils.saveToUserDefault(objectToSave: "sahuh42hai2", key: "API_TOKEN")
+        AppUtils.saveToUserDefault(objectToSave: "sahuh42hai2", key: Constants.kApiToken)
         self.dismiss(animated: true, completion: nil)
     }
 }

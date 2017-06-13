@@ -13,11 +13,13 @@ class InitialSetUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barStyle = .black
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let apiToken = AppUtils.retrieveFromUserDefaultWithKey(key: "API_TOKEN");
+        let apiToken = AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken);
         if(apiToken == nil) {
             let sb = UIStoryboard(name: "Login", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "LoginViewController")
