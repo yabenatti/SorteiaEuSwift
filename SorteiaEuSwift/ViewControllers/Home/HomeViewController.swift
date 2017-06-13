@@ -38,6 +38,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         self.emptyStateView.isHidden = true
         self.emptyStateView.messageLabel.text = "Coming Soon!"
         
@@ -84,12 +86,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = TableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 24))
-        headerView.titleLabel.text = "Raffles"
+        headerView.titleLabel.text = "RAFFLES"
         return headerView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let sb = UIStoryboard(name: "Creation", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "RaffleDetailVC") as! RaffleDetailViewController
+        vc.isCreatingRaffle = false
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     // MARK : - IBActions
