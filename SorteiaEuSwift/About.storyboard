@@ -13,7 +13,7 @@
         <scene sceneID="AMu-AE-3fO">
             <objects>
                 <navigationController id="YNr-ym-aVr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="XNL-CX-vhZ"/>
+                    <tabBarItem key="tabBarItem" title="About" image="ic_info" id="XNL-CX-vhZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6mv-uY-nY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="519" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_info" width="24" height="24"/>
+    </resources>
 </document>

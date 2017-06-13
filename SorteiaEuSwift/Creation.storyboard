@@ -13,7 +13,7 @@
         <scene sceneID="BhM-PT-H3L">
             <objects>
                 <navigationController id="zb9-He-NGS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Creation" id="gLc-Yz-dGw"/>
+                    <tabBarItem key="tabBarItem" title="Creation" image="ic_create" id="gLc-Yz-dGw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qnu-EL-FPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="519" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_create" width="24" height="24"/>
+    </resources>
 </document>

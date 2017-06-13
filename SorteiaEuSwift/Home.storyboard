@@ -13,7 +13,7 @@
         <scene sceneID="nWn-oX-Bci">
             <objects>
                 <navigationController id="H9p-Fw-wdi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="lP7-ir-a2T"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="ic_home" id="lP7-ir-a2T"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yry-Uw-apz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="519" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_home" width="24" height="24"/>
+    </resources>
 </document>
