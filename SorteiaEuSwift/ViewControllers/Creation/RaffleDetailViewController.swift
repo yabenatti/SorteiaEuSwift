@@ -16,6 +16,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     
     var isCreatingRaffle : Bool? = false
     var drawsArray = [NSString]()
+    var raffle : Raffle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,15 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.dataSource = self
         self.tableView.register(PersonTableViewCell.classForCoder(), forCellReuseIdentifier: personTableViewCellIdentifier)
         self.tableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: personTableViewCellIdentifier)
+        
+        self.raffleNameLabel.text = self.raffle?.name
+        let date = NSDate(timeIntervalSince1970: self.parseDuration(timeString: (self.raffle?.createdAt)!))
+        
+        let dayTimePeriodFormatter = DateFormatter()
+        dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
+        
+        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+        self.createdOnLabel.text = dateString;
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +61,21 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    func parseDuration(timeString:String) -> TimeInterval {
+        guard !timeString.isEmpty else {
+            return 0
+        }
+        
+        var interval:Double = 0
+        
+        let parts = timeString.components(separatedBy:":")
+        for (index, part) in parts.reversed().enumerated() {
+            interval += (Double(part) ?? 0) * pow(Double(60), Double(index))
+        }
+        
+        return interval
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -72,6 +97,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: personTableViewCellIdentifier, for: indexPath) as! PersonTableViewCell
         
         cell.personNameLabel.text = "Name"
+        cell.personImageView.image = UIImage(named: "ic_face")
         
         return cell
     }

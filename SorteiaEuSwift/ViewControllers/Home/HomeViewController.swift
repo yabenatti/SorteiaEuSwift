@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var emptyStateView: EmptyStateView!
     
-    var raffleArray = [String]()
+    var raffleArray = [Raffle]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.didTapRightBarButton(_:)))
         
         //Testing Raffle Array
-        self.raffleArray.append("Raffle1")
-        self.raffleArray.append("Raffle2")
-        self.raffleArray.append("Raffle3")
+        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
+        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R1", name: "Raffle2", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
+        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R2", name: "Raffle3", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
         
         //TableView
         self.tableView.delegate = self
@@ -71,7 +71,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: raffleTableViewCellIdentifier, for: indexPath) as! RaffleTableViewCell
         
-        cell.raffleNameLabel.text = self.raffleArray[indexPath.row]
+        let raffle : Raffle = self.raffleArray[indexPath.row];
+        cell.raffleNameLabel.text = raffle.name
         
         return cell
     }
@@ -95,6 +96,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let sb = UIStoryboard(name: "Creation", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "RaffleDetailVC") as! RaffleDetailViewController
         vc.isCreatingRaffle = false
+        vc.raffle = self.raffleArray[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
