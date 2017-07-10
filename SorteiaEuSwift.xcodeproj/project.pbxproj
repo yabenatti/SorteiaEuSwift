@@ -37,6 +37,10 @@
 		E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C71EF04AA300FD75AF /* HomeViewController.swift */; };
 		E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8C91EF04AA300FD75AF /* LoginViewController.swift */; };
 		E472A8CF1EF04AFC00FD75AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E472A8CE1EF04AFC00FD75AF /* Constants.swift */; };
+		E49398791F13B7CB00A392A5 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49398771F13B7CB00A392A5 /* LoginManager.swift */; };
+		E493987A1F13B7CB00A392A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49398781F13B7CB00A392A5 /* NetworkManager.swift */; };
+		E493987C1F13B8DE00A392A5 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493987B1F13B8DE00A392A5 /* Urls.swift */; };
+		E493987E1F13C8BC00A392A5 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E493987D1F13C8BC00A392A5 /* Manager.swift */; };
 		E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */; };
 		E4BBB1E51EF02176008A9CB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E31EF02176008A9CB2 /* Main.storyboard */; };
 		E4BBB1E71EF02176008A9CB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E61EF02176008A9CB2 /* Assets.xcassets */; };
@@ -99,6 +103,10 @@
 		E472A8C71EF04AA300FD75AF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E472A8C91EF04AA300FD75AF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E472A8CE1EF04AFC00FD75AF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E49398771F13B7CB00A392A5 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		E49398781F13B7CB00A392A5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E493987B1F13B8DE00A392A5 /* Urls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		E493987D1F13C8BC00A392A5 /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		E4BBB1DC1EF02176008A9CB2 /* SorteiaEuSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SorteiaEuSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BBB1DF1EF02176008A9CB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4BBB1E41EF02176008A9CB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +228,7 @@
 		E472A8BF1EF0307A00FD75AF /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				E493987B1F13B8DE00A392A5 /* Urls.swift */,
 				E472A8C01EF030A100FD75AF /* AppUtils.swift */,
 				E472A8CE1EF04AFC00FD75AF /* Constants.swift */,
 			);
@@ -261,6 +270,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		E49398761F13B7CB00A392A5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E49398771F13B7CB00A392A5 /* LoginManager.swift */,
+				E49398781F13B7CB00A392A5 /* NetworkManager.swift */,
+				E493987D1F13C8BC00A392A5 /* Manager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		E4BBB1D31EF02176008A9CB2 = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +305,7 @@
 		E4BBB1DE1EF02176008A9CB2 /* SorteiaEuSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E49398761F13B7CB00A392A5 /* Managers */,
 				E456D6BF1EF14E9100C8D913 /* Models */,
 				E459253E1EF05E66002C06EC /* UI */,
 				E45925391EF05344002C06EC /* TableCells */,
@@ -616,11 +636,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E493987E1F13C8BC00A392A5 /* Manager.swift in Sources */,
 				E456D6C51EF14EB800C8D913 /* Draw.swift in Sources */,
 				E472A8C11EF030A100FD75AF /* AppUtils.swift in Sources */,
 				E472A8BC1EF02F6A00FD75AF /* InitialSetUpViewController.swift in Sources */,
+				E493987A1F13B7CB00A392A5 /* NetworkManager.swift in Sources */,
 				E4BBB1E01EF02176008A9CB2 /* AppDelegate.swift in Sources */,
 				E472A8CA1EF04AA300FD75AF /* AboutViewController.swift in Sources */,
+				E49398791F13B7CB00A392A5 /* LoginManager.swift in Sources */,
 				E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */,
 				E45925401EF05E9F002C06EC /* TableHeaderView.swift in Sources */,
 				E45925461EF08045002C06EC /* EmptyStateView.swift in Sources */,
@@ -629,6 +652,7 @@
 				E472A8B91EF02D2600FD75AF /* TabBarViewController.swift in Sources */,
 				E472A8CF1EF04AFC00FD75AF /* Constants.swift in Sources */,
 				E459254C1EF088B3002C06EC /* RaffleDetailViewController.swift in Sources */,
+				E493987C1F13B8DE00A392A5 /* Urls.swift in Sources */,
 				E459254A1EF085F4002C06EC /* CreationFollowersViewController.swift in Sources */,
 				E459253C1EF05364002C06EC /* RaffleTableViewCell.swift in Sources */,
 				E456D6C11EF14E9F00C8D913 /* Person.swift in Sources */,

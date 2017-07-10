@@ -6,6 +6,7 @@ target 'SorteiaEuSwift' do
   use_frameworks!
 
   # Pods for SorteiaEuSwift
+  pod 'Alamofire', '~> 4.4'
 
   target 'SorteiaEuSwiftTests' do
     inherit! :search_paths

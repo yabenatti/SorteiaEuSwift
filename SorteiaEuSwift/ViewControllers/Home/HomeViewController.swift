@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -43,12 +44,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.emptyStateView.isHidden = true
         self.emptyStateView.messageLabel.text = "Coming Soon!"
         
-        self.tableView.reloadData()
+        self.getRaffles()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK : - Helpers
+    
+    func getRaffles() {
+        let sessionManager = SessionManager()
+        sessionManager.adapter = AccessTokenAdapter(accessToken: "1234")
+        
+        sessionManager.request(Urls.URL_RAFFLE).validate().responseJSON { (reponse) in
+            debugPrint(reponse)
+        }
+        
     }
     
 
