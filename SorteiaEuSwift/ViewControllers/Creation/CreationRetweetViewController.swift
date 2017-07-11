@@ -15,8 +15,9 @@ class CreationRetweetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Retweet Raffle"
-        
+        self.navigationItem.title = "Retweet Raffle"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         self.emptyStateView.messageLabel.text = "Coming Soon! :)"
     }
 

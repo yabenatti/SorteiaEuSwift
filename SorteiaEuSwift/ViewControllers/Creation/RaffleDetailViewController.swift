@@ -22,8 +22,9 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
 
         //Title
-        self.title = "Raffle Detail"
-        
+        self.navigationItem.title = "Raffle Detail"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         //TableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
