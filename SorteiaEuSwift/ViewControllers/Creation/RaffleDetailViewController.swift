@@ -30,18 +30,18 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.register(PersonTableViewCell.classForCoder(), forCellReuseIdentifier: personTableViewCellIdentifier)
         self.tableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: personTableViewCellIdentifier)
         
-        self.raffle = Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498685274", updatedAt: "")
-
-        self.raffleNameLabel.text = self.raffle?.name
-        if !(self.raffle?.createdAt ?? "").isEmpty {
-            let date = NSDate(timeIntervalSince1970: self.parseDuration(timeString: (self.raffle?.createdAt)!))
-            
-            let dayTimePeriodFormatter = DateFormatter()
-            dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
-            
-            let dateString = dayTimePeriodFormatter.string(from: date as Date)
-            self.createdOnLabel.text = dateString;
-        }
+//        self.raffle = Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498685274", updatedAt: "")
+//
+//        self.raffleNameLabel.text = self.raffle?.name
+//        if !(self.raffle?.createdAt ?? "").isEmpty {
+//            let date = NSDate(timeIntervalSince1970: self.parseDuration(timeString: (self.raffle?.createdAt)!))
+//            
+//            let dayTimePeriodFormatter = DateFormatter()
+//            dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
+//            
+//            let dateString = dayTimePeriodFormatter.string(from: date as Date)
+//            self.createdOnLabel.text = dateString;
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -15,12 +15,12 @@ class Raffle {
     var raffleId : String
     var name : String
     var type : String
-    var url : String
-    var createdAt : String
-    var updatedAt : String?
+    var url : String?
+    var createdAt : Int
+    var updatedAt : Int?
     
 
-    init(drawn : Bool, raffleId : String, name : String, type : String, url : String, createdAt : String, updatedAt : String?) {
+    init(drawn : Bool, raffleId : String, name : String, type : String, url : String?, createdAt : Int, updatedAt : Int?) {
         self.drawn = drawn
         
         self.raffleId = raffleId

@@ -19,7 +19,7 @@ class RaffleManager {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
-    func getRaffles(completHandler: @escaping (Bool) -> ()) {
+    func getRaffles(completionHandler: @escaping (_ raffles: [Raffle]?, _ count: Int, _ success: Bool, _ error: Error?) -> ()) {
         manager.adapter = AccessTokenAdapter(accessToken: AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken) as! String)
         manager.request(Urls.URL_RAFFLE).validate().responseJSON { (response) in
             debugPrint(response)
@@ -32,12 +32,13 @@ class RaffleManager {
                     print("example success")
                 default:
                     print("error with response status: \(status)")
-                    //completion([false])
+                    completionHandler(nil, 0, false, response.error!)
                 }
             }
             
             guard response.result.isSuccess else {
                 print(response.result.isFailure.description)
+                completionHandler(nil, 0, false, response.error!)
                 return
             }
             
@@ -46,12 +47,30 @@ class RaffleManager {
             guard let responseJSON = response.result.value as? [String: Any],
                 let dataJSON = responseJSON["data"] as? [String: Any] else {
                     print("Invalid raffle information received from the service")
+                    completionHandler(nil, 0, false, nil)
                     return
             }
             
             debugPrint(dataJSON)
+            var rafflesArray = [Raffle]()
             
-            completHandler(true)
+            guard let count = dataJSON["count"] as? Int else {
+                completionHandler(nil, 0, true, nil)
+                return
+            }
+            
+            guard let list = dataJSON["list"] as? [[String : Any]] else {
+                print("Couldn't handle list of raffles")
+                return
+            }
+            
+            for raffleDictionary in list {
+                if let raffle = Raffle.parseToRaffle(dictionary: raffleDictionary) {
+                    rafflesArray.append(raffle)
+                }
+            }
+            
+            completionHandler(rafflesArray, count, true, nil)
         }
     }
 }

@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var emptyStateView: EmptyStateView!
     
     var raffleArray = [Raffle]()
+    var count : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +28,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.didTapRightBarButton(_:)))
         
         //Testing Raffle Array
-        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
-        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R1", name: "Raffle2", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
-        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R2", name: "Raffle3", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
+//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
+//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R1", name: "Raffle2", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
+//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R2", name: "Raffle3", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
         
         //TableView
         self.tableView.delegate = self
@@ -55,13 +56,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK : - Helpers
     
     func getRaffles() {
-        RaffleManager.shared.getRaffles { (success) in
+        RaffleManager.shared.getRaffles { (rafflesArray, count, success, error) in
             if success {
-                print("Succes")
+                print("Success")
+                if let array = rafflesArray {
+                    self.raffleArray = array;
+                    self.count = count;
+                    
+                    self.tableView.reloadData()
+                }
             } else {
                 print("Failure")
             }
-        }        
+        }
     }
     
 

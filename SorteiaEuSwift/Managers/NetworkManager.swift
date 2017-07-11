@@ -19,6 +19,8 @@ class NetworkManager {
         configuration.timeoutIntervalForResource = 10
         return Alamofire.SessionManager(configuration: configuration)
     }()
+    
+    
 }
 
 /*
