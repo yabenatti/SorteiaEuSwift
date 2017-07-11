@@ -49,6 +49,7 @@
 		E4BBB1EA1EF02176008A9CB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4BBB1E81EF02176008A9CB2 /* LaunchScreen.storyboard */; };
 		E4BBB1F51EF02176008A9CB2 /* SorteiaEuSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1F41EF02176008A9CB2 /* SorteiaEuSwiftTests.swift */; };
 		E4BBB2001EF02176008A9CB2 /* SorteiaEuSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BBB1FF1EF02176008A9CB2 /* SorteiaEuSwiftUITests.swift */; };
+		E4FE276B1F15689000F4CA7C /* DrawParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FE276A1F15689000F4CA7C /* DrawParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		E4BBB1FB1EF02176008A9CB2 /* SorteiaEuSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SorteiaEuSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BBB1FF1EF02176008A9CB2 /* SorteiaEuSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorteiaEuSwiftUITests.swift; sourceTree = "<group>"; };
 		E4BBB2011EF02176008A9CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4FE276A1F15689000F4CA7C /* DrawParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E459676D1F1510A500665DE6 /* RaffleParser.swift */,
+				E4FE276A1F15689000F4CA7C /* DrawParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				E49398791F13B7CB00A392A5 /* LoginManager.swift in Sources */,
 				E472A8CD1EF04AA300FD75AF /* LoginViewController.swift in Sources */,
 				E45925401EF05E9F002C06EC /* TableHeaderView.swift in Sources */,
+				E4FE276B1F15689000F4CA7C /* DrawParser.swift in Sources */,
 				E45925461EF08045002C06EC /* EmptyStateView.swift in Sources */,
 				E472A8CB1EF04AA300FD75AF /* RaffleTypeViewController.swift in Sources */,
 				E472A8CC1EF04AA300FD75AF /* HomeViewController.swift in Sources */,

@@ -16,11 +16,14 @@ class Raffle {
     var name : String
     var type : String
     var url : String?
+    
     var createdAt : Int
     var updatedAt : Int?
     
+    var draws : [Draw]?
+    
 
-    init(drawn : Bool, raffleId : String, name : String, type : String, url : String?, createdAt : Int, updatedAt : Int?) {
+    init(drawn : Bool, raffleId : String, name : String, type : String, url : String?, createdAt : Int, updatedAt : Int?, draws: [Draw]?) {
         self.drawn = drawn
         
         self.raffleId = raffleId
@@ -29,5 +32,23 @@ class Raffle {
         self.url = url
         self.createdAt = createdAt
         self.updatedAt = updatedAt
+        
+        if let draws = draws {
+            self.draws = draws
+        }
+    }
+    
+    init() {
+        self.drawn = false
+        
+        self.raffleId = ""
+        self.name = ""
+        self.type = ""
+        self.url = ""
+        
+        self.createdAt = 0
+        self.updatedAt = 0
+
+        self.draws = [Draw]()
     }
 }

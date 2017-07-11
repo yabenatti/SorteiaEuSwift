@@ -31,23 +31,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         self.tableView.register(PersonTableViewCell.classForCoder(), forCellReuseIdentifier: personTableViewCellIdentifier)
         self.tableView.register(UINib(nibName: "PersonTableViewCell", bundle: nil), forCellReuseIdentifier: personTableViewCellIdentifier)
         
-        guard let raffle = self.raffle else {
-            print("No raffle detail")
-            return
-        }
-        
-        self.raffleNameLabel.text = raffle.name
-        if raffle.createdAt > 0 {
-            // convert Int to Double
-            let timeInterval = Double(raffle.createdAt)
-            let date = Date(timeIntervalSince1970: timeInterval)
-            
-            let dayTimePeriodFormatter = DateFormatter()
-            dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
-            
-            let dateString = dayTimePeriodFormatter.string(from: date as Date)
-            self.createdOnLabel.text = dateString;
-        }
+        self.getSpecificRaffle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +53,34 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getSpecificRaffle() {
+        guard let raffle = self.raffle else {
+            print("No raffle detail")
+            return
+        }
+        
+        RaffleManager.shared.getSpecificRaffle(raffleID: raffle.raffleId) { (raffle, success, error) in
+            if success {
+                if let raffle = raffle {
+                    self.raffleNameLabel.text = raffle.name
+                    if raffle.createdAt > 0 {
+                        // convert Int to Double
+                        let timeInterval = Double(raffle.createdAt)
+                        let date = Date(timeIntervalSince1970: timeInterval)
+                        
+                        let dayTimePeriodFormatter = DateFormatter()
+                        dayTimePeriodFormatter.dateFormat = "MMM dd YYYY hh:mm a"
+                        
+                        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+                        self.createdOnLabel.text = dateString;
+                    }
+                }
+            } else {
+                print("Error :/")
+            }
+        }
     }
     
     func parseDuration(timeString:String) -> TimeInterval {
