@@ -24,6 +24,7 @@
 		E459254C1EF088B3002C06EC /* RaffleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E459254B1EF088B3002C06EC /* RaffleDetailViewController.swift */; };
 		E45925531EF08B0D002C06EC /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45925511EF08B0D002C06EC /* PersonTableViewCell.swift */; };
 		E45925541EF08B0D002C06EC /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E45925521EF08B0D002C06EC /* PersonTableViewCell.xib */; };
+		E45967691F14FE3E00665DE6 /* RaffleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45967681F14FE3E00665DE6 /* RaffleManager.swift */; };
 		E472A8A81EF02A8400FD75AF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8A71EF02A8400FD75AF /* Home.storyboard */; };
 		E472A8AA1EF02A9100FD75AF /* Creation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8A91EF02A9100FD75AF /* Creation.storyboard */; };
 		E472A8AC1EF02A9B00FD75AF /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E472A8AB1EF02A9B00FD75AF /* About.storyboard */; };
@@ -90,6 +91,7 @@
 		E459254B1EF088B3002C06EC /* RaffleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleDetailViewController.swift; sourceTree = "<group>"; };
 		E45925511EF08B0D002C06EC /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		E45925521EF08B0D002C06EC /* PersonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		E45967681F14FE3E00665DE6 /* RaffleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaffleManager.swift; sourceTree = "<group>"; };
 		E472A8A71EF02A8400FD75AF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E472A8A91EF02A9100FD75AF /* Creation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Creation.storyboard; sourceTree = "<group>"; };
 		E472A8AB1EF02A9B00FD75AF /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				E49398771F13B7CB00A392A5 /* LoginManager.swift */,
 				E49398781F13B7CB00A392A5 /* NetworkManager.swift */,
 				E493987D1F13C8BC00A392A5 /* Manager.swift */,
+				E45967681F14FE3E00665DE6 /* RaffleManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				E472A8CF1EF04AFC00FD75AF /* Constants.swift in Sources */,
 				E459254C1EF088B3002C06EC /* RaffleDetailViewController.swift in Sources */,
 				E493987C1F13B8DE00A392A5 /* Urls.swift in Sources */,
+				E45967691F14FE3E00665DE6 /* RaffleManager.swift in Sources */,
 				E459254A1EF085F4002C06EC /* CreationFollowersViewController.swift in Sources */,
 				E459253C1EF05364002C06EC /* RaffleTableViewCell.swift in Sources */,
 				E456D6C11EF14E9F00C8D913 /* Person.swift in Sources */,

@@ -6,9 +6,22 @@
 //  Copyright © 2017 Yasmin Benatti. All rights reserved.
 //
 
-import UIKit
 import Foundation
 import Alamofire
+
+class NetworkManager {
+    
+    static let shared = NetworkManager()
+    
+    private let manager: Alamofire.SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 10
+        configuration.timeoutIntervalForResource = 10
+        return Alamofire.SessionManager(configuration: configuration)
+    }()
+}
+
+/*
 
 class NetworkManager: NSObject {
 
@@ -290,3 +303,4 @@ class NetworkManager: NSObject {
     }
 
 }
+*/

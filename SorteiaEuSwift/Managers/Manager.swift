@@ -19,8 +19,8 @@ class AccessTokenAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
-        if (urlRequest.url?.absoluteString.hasPrefix("https://httpbin.org"))! {
-            urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        if (urlRequest.url?.absoluteString.hasPrefix(Urls.URL_BASE))! {
+            urlRequest.setValue("Token " + accessToken, forHTTPHeaderField: "Authorization")
         }
         
         return urlRequest

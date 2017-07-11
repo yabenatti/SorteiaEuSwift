@@ -55,13 +55,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK : - Helpers
     
     func getRaffles() {
-        let sessionManager = SessionManager()
-        sessionManager.adapter = AccessTokenAdapter(accessToken: "1234")
-        
-        sessionManager.request(Urls.URL_RAFFLE).validate().responseJSON { (reponse) in
-            debugPrint(reponse)
-        }
-        
+        RaffleManager.shared.getRaffles { (success) in
+            if success {
+                print("Succes")
+            } else {
+                print("Failure")
+            }
+        }        
     }
     
 
