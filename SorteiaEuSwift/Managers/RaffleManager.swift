@@ -19,6 +19,37 @@ class RaffleManager {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
+    func disquilifyDrawOnRaffle(drawId: Int, raffleId: String, reason: String, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> ()) {
+        if let token = AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken) as? String {
+            manager.adapter = AccessTokenAdapter(accessToken: token)
+        }
+        
+        let parameters : Parameters = ["reason" : reason];
+        
+        manager.request(Urls.URL_RAFFLE + "/" + raffleId + "/draws/\(drawId)", method: .put, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON(completionHandler: { (response) in
+            //to get status code
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    print("example success")
+                default:
+                    print("error with response status: \(status)")
+                    completionHandler(false, response.error!)
+                }
+            }
+            
+            guard response.result.isSuccess else {
+                print(response.result.isFailure.description)
+                completionHandler(false, response.error!)
+                return
+            }
+            
+            completionHandler(true, nil)
+            
+        })
+    }
+    
+    
     func getDrawFromRaffle(raffleID: String, completionHandler: @escaping (_ draws: [Draw]?, _ count: Int, _ success: Bool, _ error: Error?) -> ()) {
         if let token = AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken) as? String {
             manager.adapter = AccessTokenAdapter(accessToken: token)

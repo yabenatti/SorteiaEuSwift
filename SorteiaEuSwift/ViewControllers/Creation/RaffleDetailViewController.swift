@@ -165,6 +165,19 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let more = UITableViewRowAction(style: .normal, title: "Disquilify") { action, index in
             print("disquilify button tapped")
+
+            let draw = self.drawsArray[editActionsForRowAt.row]
+
+            if let raffle = self.raffle {
+                RaffleManager.shared.disquilifyDrawOnRaffle(drawId: draw.id, raffleId: raffle.raffleId, reason: "reason", completionHandler: { (success, error) in
+                    if(success) {
+                        print("success")
+                        self.getDraws(raffle: raffle)
+                    } else {
+                        print("failure")
+                    }
+                })
+            }
         }
         more.backgroundColor = .lightGray
         
