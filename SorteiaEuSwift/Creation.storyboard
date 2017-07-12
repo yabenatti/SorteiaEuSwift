@@ -200,6 +200,8 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="numberOfWinnersTextField" destination="zlI-5S-KsD" id="waZ-xs-qvD"/>
+                        <outlet property="raffleNameTextField" destination="QAd-Qt-gth" id="gMa-qe-IK5"/>
                         <segue destination="fIx-Lc-UZT" kind="show" identifier="raffleDetailSegue" id="DZW-4s-J9Q"/>
                     </connections>
                 </viewController>

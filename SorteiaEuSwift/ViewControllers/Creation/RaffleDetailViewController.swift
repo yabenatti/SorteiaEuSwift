@@ -170,7 +170,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
 
             if let raffle = self.raffle {
                 RaffleManager.shared.disquilifyDrawOnRaffle(drawId: draw.id, raffleId: raffle.raffleId, reason: "reason", completionHandler: { (success, error) in
-                    if(success) {
+                    if success {
                         print("success")
                         self.getDraws(raffle: raffle)
                     } else {

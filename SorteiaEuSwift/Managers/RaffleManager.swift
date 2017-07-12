@@ -19,6 +19,50 @@ class RaffleManager {
         return Alamofire.SessionManager(configuration: configuration)
     }()
     
+    func createRaffle(type: String, name: String, completionHandler: @escaping(_ raffle: Raffle?, _ success: Bool, _ error: Error?) -> ()) {
+        if let token = AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken) as? String {
+            manager.adapter = AccessTokenAdapter(accessToken: token)
+        }
+        
+        let parameters : Parameters = ["name" : name, "type" : type]
+        
+        manager.request(Urls.URL_RAFFLE, method: .post, parameters: parameters, encoding: JSONEncoding.default).validate().responseJSON { (response) in
+            
+            //to get status code
+            if let status = response.response?.statusCode {
+                switch(status){
+                case 200:
+                    print("example success")
+                default:
+                    print("error with response status: \(status)")
+                    completionHandler(nil, false, response.error!)
+                }
+            }
+            
+            guard response.result.isSuccess else {
+                print(response.result.isFailure.description)
+                completionHandler(nil, false, response.error!)
+                return
+            }
+            
+            // to get JSON return value
+            guard let responseJSON = response.result.value as? [String : Any],
+                let dataJSON = responseJSON["data"] as? [String : Any] else {
+                    print("Invalid creation raffle information received from the service")
+                    completionHandler(nil, false, nil)
+                    return
+            }
+            
+            debugPrint(dataJSON)
+            if let raffle = Raffle.parseToRaffle(dictionary: dataJSON) {
+                completionHandler(raffle, true, nil)
+            } else {
+                completionHandler(nil, true, nil)
+            }
+
+        }
+    }
+    
     func disquilifyDrawOnRaffle(drawId: Int, raffleId: String, reason: String, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> ()) {
         if let token = AppUtils.retrieveFromUserDefaultWithKey(key: Constants.kApiToken) as? String {
             manager.adapter = AccessTokenAdapter(accessToken: token)
