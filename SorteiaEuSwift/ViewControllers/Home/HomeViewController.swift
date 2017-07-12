@@ -55,6 +55,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK : - Helpers
     
+    /*func openAnotherApp() {
+        if let url = URL(string: "yasminChat://") {
+            if UIApplication.shared.canOpenURL(url) {
+                print("Can open")
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                print("Something is wrong")
+            }
+        }
+    }*/
+    
     func getRaffles() {
         RaffleManager.shared.getRaffles { (rafflesArray, count, success, error) in
             if success {
