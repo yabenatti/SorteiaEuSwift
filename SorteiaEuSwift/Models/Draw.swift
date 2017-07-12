@@ -12,12 +12,11 @@ class Draw {
     
     var disquilified : Bool = false
     
+    var disquilifiedReason : String? = ""
+    
     var id : Int = 0
-    
-    var disquilifiedReason : String? = nil
-    
-    var createdAt : Int? = nil
-    var updatedAt : Int? = nil
+    var createdAt : Int? = 0
+    var updatedAt : Int? = 0
     
     var person : Person
     

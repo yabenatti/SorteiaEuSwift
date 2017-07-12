@@ -15,7 +15,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableView: UITableView!
     
     var isCreatingRaffle : Bool? = false
-    var drawsArray = [NSString]()
+    var drawsArray = [Draw]()
     var raffle : Raffle?
     
     override func viewDidLoad() {
@@ -55,6 +55,8 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Helpers
+    
     func getSpecificRaffle() {
         guard let raffle = self.raffle else {
             print("No raffle detail")
@@ -64,6 +66,7 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
         RaffleManager.shared.getSpecificRaffle(raffleID: raffle.raffleId) { (raffle, success, error) in
             if success {
                 if let raffle = raffle {
+                    //Fill card
                     self.raffleNameLabel.text = raffle.name
                     if raffle.createdAt > 0 {
                         // convert Int to Double
@@ -76,9 +79,25 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
                         let dateString = dayTimePeriodFormatter.string(from: date as Date)
                         self.createdOnLabel.text = dateString;
                     }
+                    
+                    //Retrieve draw
+                    self.getDraws(raffle: raffle)
                 }
             } else {
-                print("Error :/")
+                print("Error Specific Raffle :/")
+            }
+        }
+    }
+    
+    func getDraws(raffle: Raffle) {
+        RaffleManager.shared.getDrawFromRaffle(raffleID: raffle.raffleId) { (draw, count, success, error) in
+            if success {
+                if let receivedDraw = draw {
+                    self.drawsArray = receivedDraw
+                    self.tableView.reloadData()
+                }
+            } else {
+                print("Error Draws :/")
             }
         }
     }
@@ -112,13 +131,16 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     // MARK : - TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3;
+        return self.drawsArray.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: personTableViewCellIdentifier, for: indexPath) as! PersonTableViewCell
         
-        cell.personNameLabel.text = "Name"
+        if let draw = self.drawsArray[indexPath.row] as? Draw {
+            cell.personNameLabel.text = draw.person.name
+        }
+        
         cell.personImageView.image = UIImage(named: "ic_face")
         
         return cell
