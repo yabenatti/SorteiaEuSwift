@@ -22,4 +22,11 @@ class Person {
         self.name = name
         self.picture = picture
     }
+    
+    init() {
+        self.twitterId = 0
+        
+        self.name = ""
+        self.picture = ""
+    }
 }

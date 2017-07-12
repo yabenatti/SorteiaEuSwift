@@ -22,6 +22,6 @@ extension Raffle {
         let url = dictionary["url"] as? String
         let updatedAt = dictionary["updatedAt"] as? Int
         
-        return Raffle.init(drawn: drawn, raffleId: raffleId, name: name, type: type, url: url, createdAt: createdAt , updatedAt: updatedAt)
+        return Raffle.init(drawn: drawn, raffleId: raffleId, name: name, type: type, url: url, createdAt: createdAt , updatedAt: updatedAt, draws: nil)
     }
 }

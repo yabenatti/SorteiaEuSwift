@@ -22,15 +22,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         //Title
-        self.title = "Home"
-        
+        self.navigationItem.title = "Home"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         //Right Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(self.didTapRightBarButton(_:)))
-        
-        //Testing Raffle Array
-//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R0", name: "Raffle1", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
-//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R1", name: "Raffle2", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
-//        self.raffleArray.append(Raffle.init(drawn: false, raffleId: "R2", name: "Raffle3", type: Constants.kTypeFollower, url: "url", createdAt: "1498509621561", updatedAt: ""))
         
         //TableView
         self.tableView.delegate = self

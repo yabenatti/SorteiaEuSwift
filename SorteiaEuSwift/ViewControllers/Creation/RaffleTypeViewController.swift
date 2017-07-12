@@ -13,7 +13,8 @@ class RaffleTypeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Raffle Type"
+        self.navigationItem.title = "Raffle Type"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {

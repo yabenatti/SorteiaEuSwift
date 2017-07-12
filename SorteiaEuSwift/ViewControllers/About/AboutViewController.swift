@@ -14,8 +14,9 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
 
         //Title
-        self.title = "Sorteia.eu"
-        
+        self.navigationItem.title = "Sorteia.eu"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         //Logout
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogoutButton(_:)))
     }

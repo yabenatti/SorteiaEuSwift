@@ -24,10 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Tab Bar
         let tabBar = UITabBar.appearance()
-        tabBar.barTintColor = UIColor.clear
+        tabBar.barTintColor = Constants.kColorWhite
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
-        tabBar.isTranslucent = true
+        tabBar.isTranslucent = false
         
         
         //Status Bar

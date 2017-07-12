@@ -51,5 +51,4 @@ class LoginManager {
                 completion([true])
         }
     }*/
-    
 }

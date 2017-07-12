@@ -13,7 +13,9 @@ class CreationFollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Followers Raffle"
+        self.navigationItem.title = "Followers Raffle"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
