@@ -137,10 +137,8 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: personTableViewCellIdentifier, for: indexPath) as! PersonTableViewCell
         
-        if let draw = self.drawsArray[indexPath.row] as? Draw {
-            cell.personNameLabel.text = draw.person.name
-        }
-        
+        let draw = self.drawsArray[indexPath.row]
+        cell.personNameLabel.text = draw.person.name
         cell.personImageView.image = UIImage(named: "ic_face")
         
         return cell
@@ -174,6 +172,12 @@ class RaffleDetailViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        let draw = self.drawsArray[indexPath.row]
+
+        if draw.disquilified {
+            return false
+        }
+        
         return true
     }
     
