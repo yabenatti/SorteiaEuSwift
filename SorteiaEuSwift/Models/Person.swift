@@ -10,7 +10,7 @@ import Foundation
 
 class Person {
 
-    var twitterId : String
+    var twitterId : String = ""
     
     var name : String?
     var picture : String?
@@ -21,12 +21,5 @@ class Person {
         
         self.name = name
         self.picture = picture
-    }
-    
-    init() {
-        self.twitterId = ""
-        
-        self.name = ""
-        self.picture = ""
     }
 }

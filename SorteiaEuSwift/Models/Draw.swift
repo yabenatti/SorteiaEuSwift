@@ -12,16 +12,16 @@ class Draw {
     
     var disquilified : Bool = false
     
-    var disquilifiedReason : String? = ""
+    var disquilifiedReason : String?
     
     var id : Int = 0
-    var createdAt : Int? = 0
-    var updatedAt : Int? = 0
+    var createdAt : Int = 0
+    var updatedAt : Int?
     
     var person : Person
     
-    init(disquilified: Bool?, id: Int, disquilifiedReason: String?, createdAt: Int, updatedAt: Int?, person: Person) {
-        self.disquilified = disquilified!
+    init(disquilified: Bool, id: Int, disquilifiedReason: String?, createdAt: Int, updatedAt: Int?, person: Person) {
+        self.disquilified = disquilified
         
         self.id = id
         
@@ -30,18 +30,5 @@ class Draw {
         self.updatedAt = updatedAt
         
         self.person = person
-    }
-    
-    init() {
-        self.disquilified = false
-        
-        self.id = 0
-        
-        self.disquilifiedReason = ""
-        
-        self.createdAt = 0
-        self.updatedAt = 0
-        
-        self.person = Person()
     }
 }

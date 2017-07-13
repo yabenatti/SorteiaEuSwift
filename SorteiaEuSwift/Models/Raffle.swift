@@ -12,12 +12,12 @@ class Raffle {
     
     var drawn : Bool = false
     
-    var raffleId : String
-    var name : String
-    var type : String
+    var raffleId : String = ""
+    var name : String = ""
+    var type : String = ""
     var url : String?
     
-    var createdAt : Int
+    var createdAt : Int = 0
     var updatedAt : Int?
     
     var draws : [Draw]?
@@ -36,19 +36,5 @@ class Raffle {
         if let draws = draws {
             self.draws = draws
         }
-    }
-    
-    init() {
-        self.drawn = false
-        
-        self.raffleId = ""
-        self.name = ""
-        self.type = ""
-        self.url = ""
-        
-        self.createdAt = 0
-        self.updatedAt = 0
-
-        self.draws = [Draw]()
     }
 }
